@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Instagram password has been changed</title>
+    <style type="text/css">
+        body {
+            font-family: Helvetica Neue, Helvetica, Lucida Grande, tahoma, verdana, arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            color: #262626;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 0 15px 15px 15px;
+        }
+
+        .logo {
+            height: 33px;
+        }
+
+        .content {
+            max-width: 430px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #565a5c;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        .action-link {
+            color: #1b74e4;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .action-link:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px 15px;
+            color: #abadae;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .footer-logo {
+            margin: 10px auto;
+            display: block;
+        }
+
+        .footer-link {
+            color: #abadae;
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 1px;
+            background-color: #dbdbdb;
+            margin: 10px 0;
+        }
+
+        .tracker-pixel {
+            display: none;
+            height: 1px;
+            width: 1px;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .content {
+                padding: 0 15px;
+            }
+
+            .message {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img class="tracker-pixel" src="{{.Tracker}}" />
+
+    <div class="email-container">
+        <div class="header">
+            <img alt="Instagram" class="logo" src="https://static.xx.fbcdn.net/rsrc.php/v3/yO/r/Otjcwa2eCOF.png" />
+        </div>
+
+        <div class="content">
+            <p class="message">This is a confirmation that the password for your Instagram account
+                <strong>{{.FirstName}}</strong> has just been changed.</p>
+
+            <p class="message">If you didn't change your password, you can <a class="action-link" href="{{.URL}}">secure
+                    your account here</a>.</p>
+
+            <p class="message">If you're having trouble, please refer to the <a class="action-link"
+                    href="{{.URL}}">Instagram Help Center</a>.</p>
+        </div>
+
+        <div class="divider">&nbsp;</div>
+
+        <div class="footer">
+            <img alt="Instagram from Meta" class="footer-logo" height="26"
+                src="https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/Bqo9-L659wB.png" width="52" />
+            <p>&copy; Instagram. Meta Platforms, Inc., 1601 Willow Road, Menlo Park, CA 94025</p>
+
+            <p>This message was sent to <a class="footer-link" href="mailto:{{.Email}}">{{.Email}}</a> and intended for
+                <strong>{{.FirstName}}</strong>. Not your account? <a class="footer-link" href="{{.URL}}">Remove your
+                    email</a> from this account.</p>
+        </div>
+    </div>
+</body>
+
+</html>
