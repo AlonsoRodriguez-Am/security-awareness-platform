@@ -1,0 +1,31 @@
+# Core Python Dependencies
+requests==2.31.0              # API interactions with GoPhish
+fpdf2==2.8.3                  # PDF report generation
+python-dotenv==1.0.0          # Environment variable management
+pip-licenses==3.5.3           # License compliance tracking
+
+# Development Tools (optional)
+pylint==3.0.3                 # Code quality analysis
+black==23.12.1                # Code formatting
+pytest==7.4.3                 # Testing framework
+
+# System Requirements (must be installed separately)
+# GoPhish v0.12.1 - https://github.com/gophish/gophish/releases
+# MailHog v1.0.1 - https://github.com/mailhog/MailHog/releases
+# Kali Linux or equivalent security distro
+
+# Installation Instructions:
+# 1. Install system packages:
+#    sudo apt update && sudo apt install -y golang-go git
+
+# 2. Install Python packages:
+#    pip install -r requirements.txt
+
+# 3. Download and configure:
+#    - GoPhish: https://getgophish.com
+#    - MailHog: https://github.com/mailhog/MailHog
+
+# Verify installations:
+#    gophish -version
+#    mailhog -version
+#    python -c "import requests, fpdf; print('Dependencies verified')"
